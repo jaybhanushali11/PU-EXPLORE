@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>PU Explore - Parul University Map</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+</head>
+
+<body>
+
+  <!-- Top Header -->
+  <header class="header">
+    <div class="header-left">
+      <button id="menu-toggle" class="menu-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div class="logo">
+        <img src="icons/logo.png" alt="PU Explore Logo" class="logo-img">
+        <span>PU Explore</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Map Legend</h3>
+      <button id="close-sidebar" class="close-btn">&times;</button>
+    </div>
+    <ul class="legend-list" id="legend-list">
+      <!-- Icons and Names will be injected here -->
+    </ul>
+  </div>
+
+  <!-- UI Overlays -->
+  <div class="ui-overlay">
+    <!-- Search Bar -->
+    <div class="search-box">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="search-input" placeholder="Search for places...">
+    </div>
+
+    <!-- Filter Chips -->
+    <div class="filter-container">
+      <div class="filter-chip active">All</div>
+      <div class="filter-chip">College</div>
+      <div class="filter-chip">Hostel</div>
+      <div class="filter-chip">Food</div>
+      <div class="filter-chip">Gate</div>
+      <div class="filter-chip">Admin</div>
+      <div class="filter-chip">Parking</div>
+      <div class="filter-chip">Ground</div>
+      <div class="filter-chip">Library</div>
+      <div class="filter-chip">Auditorium</div>
+      <div class="filter-chip">Gym</div>
+      <div class="filter-chip">Temple</div>
+      <div class="filter-chip">Pool</div>
+      <div class="filter-chip">Park</div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Locate Me Button -->
+  <div class="locate-btn" id="locate-btn">
+    <svg class="locate-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
+    </svg>
+  </div>
+
+  <!-- Bottom Sheet -->
+  <div class="bottom-sheet">
+    <div class="drag-handle"></div>
+    <div class="sheet-content">
+      <img src="" alt="Location Image" class="location-image" id="loc-img">
+      <div class="location-info">
+        <h2 id="loc-name">Select a Location</h2>
+        <p id="loc-desc">Tap a marker on the map to see details here.</p>
+        <div id="route-stats" class="route-stats"></div>
+      </div>
+      <button class="directions-btn" id="directions-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+        </svg>
+        Get Directions
+      </button>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Leaflet Routing Machine JS -->
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>

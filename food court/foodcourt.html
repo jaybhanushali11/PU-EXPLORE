@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PU Explore - Food Courts</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="../index1.html" class="logo">
+            <!-- Using relative path to access icons from parent maps folder or general icons if available. 
+                 Assuming icons are in ../icons/ or similar. The user used icons/logo.png in maps.
+                 Let's try to access the logo we set up earlier. -->
+            <img src="../icons/logo1.png" alt="PU Explore Logo" class="logo-img">
+            <span>PU Explore</span>
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="page-title">Food Courts</h1>
+
+        <!-- Grid Container -->
+        <div id="food-grid" class="food-grid">
+            <!-- Cards will be injected via JS -->
+        </div>
+    </main>
+
+    <!-- Detailed Modal -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Food Court Name</h2>
+                <button class="close-btn" id="close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Shops list will be here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

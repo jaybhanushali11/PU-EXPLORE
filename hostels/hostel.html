@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PU Explore - Hostels</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reusing consistent styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: white;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 35px;
+            width: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #D32F2F;
+            margin-bottom: 20px;
+            border-left: 5px solid #D32F2F;
+            padding-left: 15px;
+        }
+
+        .hostel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hostel-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .hostel-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .hostel-img {
+            width: 120px;
+            height: auto;
+            object-fit: cover;
+            background: #eee;
+        }
+
+        .hostel-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hostel-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .hostel-type {
+            font-size: 14px;
+            font-weight: 500;
+            color: #D32F2F;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .view-btn {
+            margin-top: 10px;
+            background: #D32F2F;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            width: fit-content;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index1.html" class="logo">
+            <img src="../icons/logo1.png" alt="PU Explore Logo" class="logo-img">
+            <span>PU Explore</span>
+        </a>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Hostels</h1>
+
+        <div class="hostel-list">
+            <!-- Mock Data -->
+            <div class="hostel-card">
+                <img src="../icons/hostel.png" class="hostel-img" style="object-fit: contain; padding: 10px;">
+                <div class="hostel-info">
+                    <span class="hostel-type">Girls Hostel</span>
+                    <h3 class="hostel-name">Sarojini Bhawan</h3>
+                    <a href="#" class="view-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="hostel-card">
+                <img src="../icons/hostel.png" class="hostel-img" style="object-fit: contain; padding: 10px;">
+                <div class="hostel-info">
+                    <span class="hostel-type">Boys Hostel</span>
+                    <h3 class="hostel-name">Tagore Bhawan</h3>
+                    <a href="#" class="view-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="hostel-card">
+                <img src="../icons/hostel.png" class="hostel-img" style="object-fit: contain; padding: 10px;">
+                <div class="hostel-info">
+                    <span class="hostel-type">Boys Hostel</span>
+                    <h3 class="hostel-name">Atal Bhawan</h3>
+                    <a href="#" class="view-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

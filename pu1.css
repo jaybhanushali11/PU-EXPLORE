@@ -1,0 +1,335 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* BODY */
+/* BODY */
+body {
+    background-color: #9b0000;
+    /* Rich Gradient Base */
+    background: radial-gradient(circle at 0% 0%, #ff4d4d 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, #5a0000 0%, transparent 50%),
+        linear-gradient(135deg, #d50000 0%, #8a0000 100%);
+
+    /* Subtle Technical Grid Overlay */
+    background-image:
+        radial-gradient(circle at 0% 0%, rgba(255, 77, 77, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(90, 0, 0, 0.4) 0%, transparent 50%),
+        linear-gradient(135deg, #d50000 0%, #8a0000 100%),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+    background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-position: 0 0, 0 0, 0 0, -1px -1px, -1px -1px;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    /* Keeps pattern steady during scroll */
+}
+
+/* ---------------- TOP SECTION (WHITE) ---------------- */
+.top-section {
+    background: white;
+    padding: 60px 20px 80px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    /* Create a smoother curve using clip-path or keeping border-radius but adjusting */
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.tagline {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #b71c1c;
+    /* Deep red to match theme */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    opacity: 0;
+    /* Star hidden */
+    animation: fadeInDown 0.8s ease-out 0.3s forwards;
+    /* Delayed to come AFTER logo */
+}
+
+.logo {
+    width: 280px;
+    max-width: 80%;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    /* Start hidden so animation flows */
+    animation: fadeInDown 0.8s ease-out forwards;
+    /* No delay, comes first */
+}
+
+/* ---------------- BOTTOM SECTION ---------------- */
+.bottom-section {
+    padding: 40px 24px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    /* Animation defaults */
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stagger Animations */
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.card:active {
+    transform: scale(0.95);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.card-sub {
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    animation: fadeIn 1s ease-out 0.8s forwards;
+    opacity: 0;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bottom-section {
+        max-width: 1000px;
+    }
+}
+
+/* ---------------- BACKGROUND ANIMATION ---------------- */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Behind everything */
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    border-radius: 10px;
+    /* Rounded squares/circles */
+}
+
+/* Differing sizes and positions for variety */
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 10%;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
