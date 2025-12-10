@@ -1,0 +1,6 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="20" cy="20" r="20" fill="#D32F2F"/>
+  <path d="M7 15h14l-3-7-3 7zm-3.6 4L9 19c.6 0 1 .4 1 1v4h10v-4c0-.6.4-1 1-1l5.6 1.4L33 3h-2l-2 9-2-9h-2l-2 9-2-9h-2l-2 9-2-9H5l-1.6 16zM5 25h26v3H5z" fill="white"/> 
+  <!-- Stationery / Pen / Ruler representation -->
+  <path d="M25 8h-4.18C20.4 5.72 18.39 4 16 4s-4.4 1.72-4.82 4H7v11h18V8zm-9-2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-5 4h2v7h-2v-7zm4 0h2v7h-2v-7zm4 0h2v7h-2v-7zM7 21h18v2.73l-1.63 1.25L25 28l-8-.01V24h-2v4.01L7 28l1.63-3.02L7 23.73V21z" fill="white"/>
+</svg>
