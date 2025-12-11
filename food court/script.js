@@ -2,13 +2,18 @@
 const foodCourts = [
     {
         id: 1,
-        name: "Main Food Court (Canteen)",
+        name: "Main Food Court",
         image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80",
         description: "The central hub for food lovers with multiple outlets.",
         shops: [
-            { name: "Dosa Plaza", description: "South Indian Delicacies", image: "https://images.unsplash.com/photo-1589301760574-d816c1543e2d?auto=format&fit=crop&w=200&q=80" },
-            { name: "La Pino'z Pizza", description: "Delicious Pizzas", image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=200&q=80" },
-            { name: "Honest", description: "Pav Bhaji & Pulav", image: "https://images.unsplash.com/photo-1606471191009-63994c53433b?auto=format&fit=crop&w=200&q=80" }
+            { name: "SANTUSHTI", description: "Shakes & More..", image: "img/santhusti.png" },
+            { name: "Jagdish", description: "Vadodara's Taste Since 1945", image: "img/jagdish.png" },
+            { name: "Indian Salt (Tandoor)", description: "Naan, Chole & more..", image: "img/indian salt.png" },
+            { name: "Plus91 Boba", description: "The Korean Cafe", image: "img/91boba.png" },
+            { name: "Messy Bowl", description: "Cafe & Lounge", image: "img/messybowl.png" },
+            { name: "Wok & Chops", description: "PAN ASIAN FOOD", image: "img/wok&chops.png" },
+            { name: "MARCOS DA' PIZZA", description: "Fresh Out of Oven", image: "img/marcospizza.png" },
+            { name: "Havmor Ice cream", description: "Ice cream & more..", image: "img/havmor.png" },
         ]
     },
     {
