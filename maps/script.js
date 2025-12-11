@@ -13,11 +13,12 @@ L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
 // Locations Data
 // Locations Data
 const locations = [
-  { name: "Parul University Circle", lat: 22.288805, lng: 73.364571, category: "Gate", description: "Central landmark circle.", image: "pictures/pu circle.jpg", icon: "icons/circle.svg" },
+  { name: "Parul University Circle", lat: 22.288805, lng: 73.364571, category: "Gate", description: "Central landmark circle.", image: "pictures/Circle.jpg", icon: "icons/circle.svg" },
+  { name: "Parul University Main Gate", lat: 22.287726577551354, lng: 73.36460956035357, category: "Gate", description: "Main Gate Of University.", image: "pictures/Parul University(1).jpg", icon: "icons/gate.svg" },
   { name: "Parul Admin Cell", lat: 22.288759, lng: 73.363886, category: "Admin", description: "Administrative office.", image: "pictures/Administrative Block.jpg", icon: "icons/admin.svg" },
   { name: "Parul University Auditorium", lat: 22.288838, lng: 73.363836, category: "Auditorium", description: "Main auditorium.", image: "pictures/Auditorium.jpg", icon: "icons/auditorium.svg" },
   { name: "Sardar Bhawan - A | Boys Hostel", lat: 22.289089, lng: 73.363345, category: "Hostel", description: "Boys Hostel.", image: "pictures/Boys Hostel.jpg", icon: "icons/hostel.svg" },
-  { name: "Parul Institute of Ayurved", lat: 22.289228, lng: 73.363404, category: "College", description: "Ayurveda Institute.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
+  { name: "Parul Institute of Ayurved", lat: 22.289228, lng: 73.363404, category: "College", description: "Ayurveda Institute.", image: "pictures/Parul Ayurved Hospital.jpg", icon: "icons/college.svg" },
   { name: "PU Football Ground", lat: 22.289319, lng: 73.362717, category: "Ground", description: "Football field.", image: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=600&q=80", icon: "icons/ground.svg" },
   { name: "Parul University Gate No. 3", lat: 22.287617, lng: 73.363067, category: "Gate", description: "Entrance Gate 3.", image: "https://images.unsplash.com/photo-1542601906990-24ccd54b549c?auto=format&fit=crop&w=600&q=80", icon: "icons/gate.svg" },
   { name: "Parking Area", lat: 22.288172, lng: 73.362587, category: "Parking", description: "General parking.", image: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80", icon: "icons/parking.svg" },
@@ -25,9 +26,9 @@ const locations = [
   { name: "Indira Bhawan - A", lat: 22.289741, lng: 73.361623, category: "Hostel", description: "Girls Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
   { name: "Mr. Puff", lat: 22.289969, lng: 73.364386, category: "Food", description: "Bakery and snacks.", image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80", icon: "icons/food.svg" },
   { name: "Mr. Beans & Farki", lat: 22.289942, lng: 73.364677, category: "Food", description: "Cafe and beverages.", image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80", icon: "icons/food.svg" },
-  { name: "Parul University Basketball Court", lat: 22.290399, lng: 73.364629, category: "Ground", description: "Basketball court.", image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80", icon: "icons/ground.svg" },
+  { name: "Parul University Basketball Court", lat: 22.290399, lng: 73.364629, category: "Ground", description: "Basketball court.", image: "pictures/basket court.jpg", icon: "icons/ground.svg" },
   { name: "PU Fitness GYM", lat: 22.290010, lng: 73.364971, category: "Gym", description: "University Gym.", image: "pictures/pu fitness gym.jpg", icon: "icons/gym.svg" },
-  { name: "Shree Sai Temple", lat: 22.290577, lng: 73.365056, category: "Temple", description: "Campus Temple.", image: "pictures/shree sai temple.jpg", icon: "icons/temple.svg" },
+  { name: "Shree Sai Temple", lat: 22.290577, lng: 73.365056, category: "Temple", description: "Campus Temple.", image: "pictures/Mandir.jpg", icon: "icons/temple.svg" },
   { name: "Shastri Bhawan A", lat: 22.290924, lng: 73.364863, category: "Hostel", description: "Boys Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
   { name: "Shastri Bhawan B", lat: 22.290972, lng: 73.365145, category: "Hostel", description: "Boys Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
   { name: "Shastri Bhawan c", lat: 22.290872, lng: 73.365241, category: "Hostel", description: "Boys Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
@@ -38,7 +39,7 @@ const locations = [
   { name: "Jawaharlal Nehru Homoeopathic Medical College", lat: 22.290610, lng: 73.365425, category: "College", description: "Medical College.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
   { name: "Parul Polytechnic Institute", lat: 22.291042, lng: 73.365941, category: "College", description: "Polytechnic Building.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
   { name: "Parul University Volleyball Court", lat: 22.290341, lng: 73.364062, category: "Ground", description: "Sports court.", image: "https://images.unsplash.com/photo-1612872087720-48ca45e4c6c0?auto=format&fit=crop&w=600&q=80", icon: "icons/ground.svg" },
-  { name: "Tennis Court", lat: 22.290562, lng: 73.364157, category: "Ground", description: "Sports court.", image: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80", icon: "icons/ground.svg" },
+  { name: "Tennis Court", lat: 22.290562, lng: 73.364157, category: "Ground", description: "Sports court.", image: "pictures/Tennis.jpg", icon: "icons/ground.svg" },
   { name: "Parul University Basketball Court", lat: 22.290393, lng: 73.364621, category: "Ground", description: "Play area.", image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80", icon: "icons/ground.svg" },
   { name: "Tagore Bhawan A", lat: 22.291929, lng: 73.364635, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
   { name: "Tagore Bhawan B", lat: 22.291936, lng: 73.364636, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
@@ -58,17 +59,17 @@ const locations = [
   { name: "Milkha Bhawan-A", lat: 22.289130, lng: 73.361043, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
   { name: "Indira Bhawan - A", lat: 22.289709, lng: 73.361610, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
   { name: "Shakuntala bhavan B", lat: 22.295228, lng: 73.364747, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "Shakuntala bhavan B", lat: 22.295264, lng: 73.364747, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
+  { name: "Shakuntala bhavan B", lat: 22.295264, lng: 73.364747, category: "Hostel", description: "Hostel.", image: "pictures/Shakuntala bhavan b.jpg", icon: "icons/hostel.svg" },
   { name: "Parul Institute of Design", lat: 22.294948, lng: 73.364266, category: "College", description: "Design School.", image: "pictures/Pu designing building.jpg", icon: "icons/college.svg" },
-  { name: "Subhash Chandra Bose Bhavan", lat: 22.292925, lng: 73.362169, category: "College", description: "Academic Block.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
+  { name: "Subhash Chandra Bose Bhavan", lat: 22.292925, lng: 73.362169, category: "College", description: "Academic Block.", image: "pictures/Subhash chandra bose bhavan.jpg", icon: "icons/college.svg" },
   { name: "Pearson VUE Select Test center", lat: 22.292861, lng: 73.361829, category: "College", description: "Exam Center.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
   { name: "Bus Parking, Azad Bhawan", lat: 22.294045, lng: 73.362617, category: "Parking", description: "Bus Parking.", image: "pictures/Bus parking (azad).jpg", icon: "icons/parking.svg" },
-  { name: "Azad Bhavan B", lat: 22.294764, lng: 73.362205, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "Azad Bhavan c", lat: 22.295027, lng: 73.362087, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "Azad Bhavan Park", lat: 22.294527, lng: 73.361684, category: "Park", description: "Hostel Park.", image: "https://images.unsplash.com/photo-1496347646636-ea47f7d6b37b?auto=format&fit=crop&w=600&q=80", icon: "icons/park.svg" },
-  { name: "Tagore c", lat: 22.295330, lng: 73.360625, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "Atal bhavan - B", lat: 22.294985, lng: 73.359883, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "Atal Bhawan A Hostel", lat: 22.294803, lng: 73.359317, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
+  { name: "Azad Bhavan B", lat: 22.294764, lng: 73.362205, category: "Hostel", description: "Hostel.", image: "pictures/Azad bhavan b.jpg", icon: "icons/hostel.svg" },
+  { name: "Azad Bhavan c", lat: 22.295027, lng: 73.362087, category: "Hostel", description: "Hostel.", image: "pictures/Azad bhavan c.jpg", icon: "icons/hostel.svg" },
+  { name: "Azad Bhavan Park", lat: 22.294527, lng: 73.361684, category: "Park", description: "Hostel Park.", image: "pictures/Azad bhawn park.jpg", icon: "icons/park.svg" },
+  { name: "Tagore c", lat: 22.295330, lng: 73.360625, category: "Hostel", description: "Hostel.", image: "pictures/Tagore c.jpg", icon: "icons/hostel.svg" },
+  { name: "Atal bhavan - B", lat: 22.294985, lng: 73.359883, category: "Hostel", description: "Hostel.", image: "pictures/Atal Bhawan b.jpg", icon: "icons/hostel.svg" },
+  { name: "Atal Bhawan A Hostel", lat: 22.294803, lng: 73.359317, category: "Hostel", description: "Hostel.", image: "pictures/Atal bhavan a.jpg", icon: "icons/hostel.svg" },
   { name: "Utopia Food Court", lat: 22.293904, lng: 73.358841, category: "Food", description: "Food Court.", image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80", icon: "icons/food.svg" },
   { name: "Parul Institute of Homoeopathy & Research", lat: 22.293505, lng: 73.359158, category: "College", description: "Medical College.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
   { name: "Hockey ground", lat: 22.294565, lng: 73.366450, category: "Ground", description: "Sports Field.", image: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=600&q=80", icon: "icons/ground.svg" },
@@ -81,15 +82,16 @@ const locations = [
   { name: "PIT Library", lat: 22.286271, lng: 73.364744, category: "Library", description: "PIT Library.", image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80", icon: "icons/library.svg" },
   { name: "Jawaharlal Nehru Homoeopathic College Hospital", lat: 22.285708, lng: 73.364473, category: "College", description: "Applied Sciences.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
   { name: "Parul Institute Of Applied Sciences", lat: 22.285375, lng: 73.364151, category: "College", description: "Applied Sciences.", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", icon: "icons/college.svg" },
-  { name: "Sadar Bhavan A Hostel", lat: 22.285430, lng: 73.363629, category: "Hostel", description: "Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "Sardar Bhawan B | Boys Hostel", lat: 22.285152, lng: 73.363682, category: "Hostel", description: "Boys Hostel.", image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80", icon: "icons/hostel.svg" },
-  { name: "R Patel Copy Center", lat: 22.286739, lng: 73.365048, category: "Stationery", description: "Stationery and Copy Center.", image: "https://images.unsplash.com/photo-1550523117-64b18df4dc93?auto=format&fit=crop&w=600&q=80", icon: "icons/stationery.svg" }
+  { name: "Sadar Bhavan A Hostel", lat: 22.285430, lng: 73.363629, category: "Hostel", description: "Hostel.", image: "pictures/Sardara.jpg", icon: "icons/hostel.svg" },
+  { name: "Sardar Bhawan B | Boys Hostel", lat: 22.285152, lng: 73.363682, category: "Hostel", description: "Boys Hostel.", image: "pictures/Sardarb.jpg", icon: "icons/hostel.svg" },
+  { name: "R Patel Copy Center", lat: 22.286739, lng: 73.365048, category: "Stationery", description: "Stationery and Copy Center.", image: "pictures/r-patel.jpg", icon: "icons/stationery.svg" }
 ];
 
 let markers = [];
 const bottomSheet = document.querySelector('.bottom-sheet');
 const sheetContent = document.querySelector('.sheet-content');
 let routingControl = null;
+
 
 // User Location State
 let userMarker = null;
@@ -222,6 +224,8 @@ function openBottomSheet(location) {
 
   bottomSheet.classList.add('active');
 }
+
+
 
 // Route State
 let currentDestination = null;

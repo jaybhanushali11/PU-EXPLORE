@@ -3,46 +3,60 @@ const foodCourts = [
     {
         id: 1,
         name: "Main Food Court",
-        image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80",
+        image: "img/Main food.jpeg",
         description: "The central hub for food lovers with multiple outlets.",
         shops: [
             { name: "SANTUSHTI", description: "Shakes & More..", image: "img/santhusti.png" },
             { name: "Jagdish", description: "Vadodara's Taste Since 1945", image: "img/jagdish.png" },
-            { name: "Indian Salt (Tandoor)", description: "Naan, Chole & more..", image: "img/indian salt.png" },
+            { name: "Indian Salt (Tandoor)", description: "Amritsari Kulcha | Chur Chur Naan | Chole Bhature", image: "img/indian salt.png" },
             { name: "Plus91 Boba", description: "The Korean Cafe", image: "img/91boba.png" },
             { name: "Messy Bowl", description: "Cafe & Lounge", image: "img/messybowl.png" },
             { name: "Wok & Chops", description: "PAN ASIAN FOOD", image: "img/wok&chops.png" },
             { name: "MARCOS DA' PIZZA", description: "Fresh Out of Oven", image: "img/marcospizza.png" },
             { name: "Havmor Ice cream", description: "Ice cream & more..", image: "img/havmor.png" },
+            { name: "Brown Burger CO", description: "Choose your health", image: "img/brownburger.png" },
+            { name: "GOODNESS By NAIRA", description: "Food For good friends", image: "img/goodness.png" },
+            { name: "HONEST FOOD CENTER", description: "The Taste of Real Happiness", image: "img/honest.png" },
+            { name: "Cafe Appetito", description: "Fresh Brown Delicious Bites", image: "img/cafeapp.png" },
+            { name: "Kudrati Kahumbo", description: "Shots | Moctails | Juices", image: "img/kk.png" },
         ]
     },
     {
         id: 2,
-        name: "Nescafe Area",
-        image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+        name: "Greenzy Court",
+        image: "img/Greenzyfood.jpg",
         description: "Coffee, snacks, and good vibes.",
         shops: [
-            { name: "Nescafe", description: "Coffee & Maggi", image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=200&q=80" },
-            { name: "Ice Cream Parlour", description: "Shakes & Scoops", image: "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=200&q=80" }
+            { name: "Fruiteria", description: "Fresh finds For Bright Minds", image: "img/fruit.png" },
+            { name: "Vadilal Ice cream", description: "Ice Cream & more..", image: "img/vadilal.png" },
+            { name: "Night Express", description: "Tasty food & more..", image: "img/nightexpress.png" },
+            { name: "Patels Rajwadi Chai", description: "Chai & coffee", image: "img/chai.png" },
+            { name: "Egg Zone", description: "eggs and more", image: "img/eggzone.png" },
+            { name: "Ur Choice Bakery", description: "Bakes the fresh", image: "img/urchoice.png" },
+            { name: "The Vadapav factory", description: "Day & Night Vadapav and Dabeli", image: "img/d&nvadapav.png" },
+            { name: "Mr. Puff", description: "Bakery & more..", image: "img/mrpuff.png" },
+            { name: "Pahadi Mo:Mo", description: "The real taste of Nepal", image: "img/pmomo.png" },
+            { name: "The Biryani Hub", description: "The best biryani", image: "img/thebiryanihub.png" },
+            { name: "Het Staionery", description: "Books | Xerox & more..", image: "img/hetstationery.png" },
+            { name: "Samosazz", description: "The Fun Triangle", image: "img/samosazz.png" }
         ]
     },
     {
         id: 3,
-        name: "Hostel Mess Complex",
+        name: "Will Be Updated Soon",
         image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-        description: "Daily meals for hostel students.",
+        description: "comming soon.",
         shops: [
-            { name: "Mess 1", description: "Regular Thali", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=200&q=80" },
-            { name: "Fruit Shop", description: "Fresh Fruits & Juices", image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=200&q=80" }
+            { name: "none", description: "none", image: "none" }
         ]
     },
     {
         id: 4,
-        name: "Architecture Canteen",
+        name: "Will Be Updated Soon",
         image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
-        description: "A cozy spot near the architecture building.",
+        description: "comming soon.",
         shops: [
-            { name: "Snack Point", description: "Sandwiches & Tea", image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=200&q=80" }
+            { name: "none", description: "none", image: "none" }
         ]
     }
 ];
