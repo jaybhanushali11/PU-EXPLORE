@@ -99,14 +99,41 @@ let userAccuracyCircle = null;
 let userWatchId = null;
 let currentUserPos = null;
 
+// Icon configuration mapping Categories to Material Symbols and Colors
+const categoryStyles = {
+  "Gate": { icon: "door_front", color: "#00796B" }, // Teal
+  "Admin": { icon: "admin_panel_settings", color: "#303F9F" }, // Indigo
+  "Auditorium": { icon: "stadium", color: "#512DA8" }, // Deep Purple
+  "Hostel": { icon: "bed", color: "#7B1FA2" }, // Purple
+  "College": { icon: "school", color: "#1976D2" }, // Blue
+  "Ground": { icon: "sports_soccer", color: "#388E3C" }, // Green
+  "Parking": { icon: "local_parking", color: "#455A64" }, // Blue Grey
+  "Food": { icon: "restaurant", color: "#F57C00" }, // Orange
+  "Gym": { icon: "fitness_center", color: "#D32F2F" }, // Red
+  "Temple": { icon: "temple_hindu", color: "#FFA000" }, // Amber
+  "Park": { icon: "park", color: "#689F38" }, // Light Green
+  "Library": { icon: "local_library", color: "#5D4037" }, // Brown
+  "Pool": { icon: "pool", color: "#0097A7" }, // Cyan
+  "Workshop": { icon: "handyman", color: "#616161" }, // Grey
+  "Stationery": { icon: "draw", color: "#E64A19" } // Deep Orange
+};
+
 // Icon Helper
-function getCustomIcon(iconUrl) {
-  return L.icon({
-    iconUrl: iconUrl,
-    iconSize: [40, 40],
-    iconAnchor: [20, 20], // Center
-    popupAnchor: [0, -20],
-    className: 'smooth-icon' // For CSS Transitions
+function getCustomIcon(category) {
+  const styleInfo = categoryStyles[category] || { icon: "place", color: "#D32F2F" };
+
+  const html = `
+    <div class="custom-marker" style="--marker-color: ${styleInfo.color};">
+      <span class="material-symbols-rounded marker-icon">${styleInfo.icon}</span>
+    </div>
+  `;
+
+  return L.divIcon({
+    html: html,
+    className: 'custom-div-icon', // Wrapper class
+    iconSize: [42, 52],
+    iconAnchor: [21, 52],
+    popupAnchor: [0, -45]
   });
 }
 
@@ -132,7 +159,7 @@ function loadMarkers(filterCategory = 'All') {
     if (filterCategory !== 'All' && loc.category !== filterCategory) return;
 
     const marker = L.marker([loc.lat, loc.lng], {
-      icon: getCustomIcon(loc.icon)
+      icon: getCustomIcon(loc.category)
     });
 
     // Only add to map if visible
@@ -441,31 +468,35 @@ function loadLegend() {
   // Define the unique categories and their icons manually or extract from locations
   // Manual list ensures correct order and nice labels
   const categories = [
-    { name: 'Gateway', icon: 'icons/gate.svg' },
-    { name: 'Colleges', icon: 'icons/college.svg' },
-    { name: 'Library', icon: 'icons/library.svg' },
-    { name: 'Auditoriums', icon: 'icons/auditorium.svg' },
-    { name: 'Hostels', icon: 'icons/hostel.svg' },
-    { name: 'Food Court', icon: 'icons/food.svg' },
-    { name: 'Sports Ground', icon: 'icons/ground.svg' },
-    { name: 'Gym', icon: 'icons/gym.svg' },
-    { name: 'Swimming Pool', icon: 'icons/pool.svg' },
-    { name: 'Temple', icon: 'icons/temple.svg' },
-    { name: 'Parks', icon: 'icons/park.svg' },
-    { name: 'Admin', icon: 'icons/admin.svg' },
-    { name: 'Parking', icon: 'icons/parking.svg' },
-    { name: 'Workshop', icon: 'icons/workshop.svg' },
-    { name: 'Stationery', icon: 'icons/stationery.svg' }
+    { name: 'Gate', label: 'Gateway' },
+    { name: 'College', label: 'Colleges' },
+    { name: 'Library', label: 'Library' },
+    { name: 'Auditorium', label: 'Auditoriums' },
+    { name: 'Hostel', label: 'Hostels' },
+    { name: 'Food', label: 'Food Court' },
+    { name: 'Ground', label: 'Sports Ground' },
+    { name: 'Gym', label: 'Gym' },
+    { name: 'Pool', label: 'Swimming Pool' },
+    { name: 'Temple', label: 'Temple' },
+    { name: 'Park', label: 'Parks' },
+    { name: 'Admin', label: 'Admin' },
+    { name: 'Parking', label: 'Parking' },
+    { name: 'Workshop', label: 'Workshop' },
+    { name: 'Stationery', label: 'Stationery' }
   ];
 
   legendList.innerHTML = ''; // Clear
 
   categories.forEach(cat => {
+    const styleInfo = categoryStyles[cat.name] || { icon: 'place', color: '#D32F2F' };
+
     const li = document.createElement('li');
     li.className = 'legend-item';
     li.innerHTML = `
-            <img src="${cat.icon}" class="legend-icon" alt="${cat.name}">
-            <span class="legend-text">${cat.name}</span>
+            <div class="legend-icon-container" style="background-color: ${styleInfo.color}15; color: ${styleInfo.color}; border-color: ${styleInfo.color}40;">
+                <span class="material-symbols-rounded">${styleInfo.icon}</span>
+            </div>
+            <span class="legend-text">${cat.label}</span>
         `;
 
     legendList.appendChild(li);

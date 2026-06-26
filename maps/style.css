@@ -120,10 +120,18 @@ body {
   background: #fff5f5;
 }
 
-.legend-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.legend-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid;
+}
+
+.legend-icon-container .material-symbols-rounded {
+  font-size: 22px;
 }
 
 .legend-text {
@@ -386,35 +394,57 @@ body {
   font-weight: 700;
 }
 
-/* Smooth Icon Transitions */
-.smooth-icon {
+/* Custom Marker Styling */
+.custom-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.custom-marker {
+  width: 42px;
+  height: 42px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid var(--marker-color, #D32F2F);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.smooth-icon:hover {
-  width: 50px !important;
-  height: 50px !important;
-  margin-left: -25px !important;
-  margin-top: -25px !important;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) brightness(1.1);
-  z-index: 10000 !important;
+.custom-marker::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 8px 0;
+  border-style: solid;
+  border-color: var(--marker-color, #D32F2F) transparent transparent transparent;
+}
+
+.marker-icon {
+  font-size: 24px;
+  color: var(--marker-color, #D32F2F);
+}
+
+.custom-div-icon:hover .custom-marker {
+  transform: scale(1.15) translateY(-5px);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+  z-index: 10000;
 }
 
 @keyframes popIn {
   from {
+    transform: scale(0) translateY(10px);
     opacity: 0;
-    width: 0px !important;
-    height: 0px !important;
-    margin-left: 0px !important;
-    margin-top: 0px !important;
   }
 
   to {
+    transform: scale(1) translateY(0);
     opacity: 1;
-    width: 40px !important;
-    height: 40px !important;
-    margin-left: -20px !important;
-    margin-top: -20px !important;
   }
 }
